@@ -6,7 +6,7 @@
   "repository": "https://github.com/ledermann/pingcrm",
   "logo": "https://www.ruby-lang.org/images/header-ruby-logo@2x.png",
   "scripts": {
-    "postdeploy": "bundle exec rake seed"
+    "postdeploy": "bundle exec rake db:seed"
   },
   "env": {
     "SECRET_TOKEN": {
@@ -27,6 +27,9 @@
   "image": "heroku/ruby",
   "addons": [],
   "buildpacks": [
+    {
+      "url": "heroku/https: //github.com/heroku/heroku-buildpack-activestorage-preview"
+    },
     {
       "url": "heroku/nodejs"
     },
