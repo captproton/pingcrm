@@ -11,10 +11,14 @@ There is a hosted installation of this demo available at https://pingcrm.lederma
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-Or, you can deploy your own to Heroku
-[deploy to Heroku]
-![Deploy](deploy_to_heroku.png)
-(the button should launch a script that `runs rake db:setup`)
+Or, you can deploy your own installation to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Again you login with:
+
+- **Username:** johndoe@example.com
+- **Password:** secret
 
 ## Installation
 
