@@ -28,7 +28,7 @@
   "addons": [],
   "buildpacks": [
     {
-      "url": "https: //github.com/heroku/heroku-buildpack-activestorage-preview"
+      "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
     },
     {
       "url": "heroku/nodejs"
