@@ -26,11 +26,7 @@
   },
   "image": "heroku/ruby",
   "addons": [],
-  "buildpacks": [
-    {
-      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
-    }
-  ],
+  "buildpacks": [],
   "environments": {
     "test": {
       "scripts": {
