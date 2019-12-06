@@ -1,25 +1,54 @@
 {
-  "name": "PingCRM",
-  "description": "A Ruby on Rails demo application to illustrate how Inertia.js works https: //pingcrm.ledermann.dev",
+  "name": "Small Sharp Tool",
+  "description": "This app does one little thing, and does it well.",
+  "keywords": ["productivity", "HTML5", "scalpel"],
   "website": "https://small-sharp-tool.com/",
-  "repository": "https://github.com/captproton/pingcrm",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+  "repository": "https://github.com/jane-doe/small-sharp-tool",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/welcome",
   "scripts": {
-    "postdeploy": "bundle exec rake db:seed"
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
   },
   "formation": {
     "web": {
       "quantity": 2,
-      "size": "free"
+      "size": "Performance-M"
     }
   },
   "image": "heroku/ruby",
-  "buildpacks": "buildpacks": [
+  "addons": [
+    "openredis",
     {
-      "url": "heroku/nodejs"
+      "plan": "mongolab:shared-single-small",
+      "as": "MONGO"
     },
     {
-      "url": "heroku/ruby"
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
     }
-  ]
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
 }
