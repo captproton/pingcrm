@@ -11,6 +11,10 @@ There is a hosted installation of this demo available at https://pingcrm.lederma
 - **Username:** johndoe@example.com
 - **Password:** secret
 
+Or, you can deploy your own to Heroku
+[deploy to Heroku]
+![Deploy](deploy_to_heroku.png)
+(the button should launch a script that `runs rake db:setup`)
 
 ## Installation
 
@@ -38,7 +42,6 @@ You're ready to go! Visit PingCRM in your browser (http://localhost:3000), and l
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-
 ## Running tests
 
 To run the PingCRM tests, run:
@@ -47,14 +50,12 @@ To run the PingCRM tests, run:
 rails test:system
 ```
 
-
 ## Requirements
 
 - Ruby 2.6
 - PostgreSQL
 
-
 ## Credits
 
-* Original work by Jonathan Reinink (@reinink) and contributors
-* Port to Ruby on Rails by Georg Ledermann (@ledermann)
+- Original work by Jonathan Reinink (@reinink) and contributors
+- Port to Ruby on Rails by Georg Ledermann (@ledermann)

@@ -1,0 +1,19 @@
+{
+  "name": "PingCRM",
+  "description": "
+A Ruby on Rails demo application to illustrate how Inertia.js works https: //pingcrm.ledermann.dev
+",
+  "website": "http://rubyonrails.org",
+  "repository": "https://github.com/captproton/pingcrm",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:seed"
+  },
+  "env": {
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "RAILS_SERVE_STATIC_FILES": "true"
+  },
+  "addons": ["heroku-postgresql"]
+}
+
